@@ -7,11 +7,12 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            font-size: 18px; /* 增加文本字体大小 */
+            font-size: 26px; /* 增加文本字体大小 */
             margin: 0;
             padding: 0;
-            background: url('images/background.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background: url('images/background.jpg') no-repeat center center;
+            background-size: contain; /* 调整背景图片的大小 */
+            background-color: #000; /* 如果图片没有填充整个页面，显示黑色背景 */
             color: white;
         }
         header {
@@ -29,7 +30,7 @@
             margin-bottom: 20px;
         }
         .section h2 {
-            font-size: 24px; /* 增加标题字体大小 */
+            font-size: 30px; /* 增加标题字体大小 */
             color: #4CAF50;
         }
         .link-list {
@@ -40,7 +41,7 @@
             margin: 5px 0;
         }
         .link-list a {
-            font-size: 20px; /* 增加链接字体大小 */
+            font-size: 24px; /* 增加链接字体大小 */
             color: #4CAF50;
             text-decoration: none;
         }
