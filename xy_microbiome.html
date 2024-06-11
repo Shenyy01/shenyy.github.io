@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XY and HZ buffaloes' Microbiome Data</title>
+    <title>HZ and XY Microbiome Data</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -56,14 +56,17 @@
         .download-links a:hover {
             text-decoration: underline;
         }
+        .info {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>XY and HZ buffaloes' Microbiome Data</h1>
+        <h1>HZ and XY Microbiome Data</h1>
     </header>
     <div class="content">
-        <p>This page shows the NR species annotation table for XY and HZ buffaloes' microbiome data. You can download the full dataset using the link below.</p>
+        <p>This page shows the NR species annotation table for HZ and XY Buffalo microbiome data. You can download the full dataset using the link below.</p>
         <table>
             <thead>
                 <tr>
@@ -86,19 +89,26 @@
             </tbody>
         </table>
         <ul class="download-links">
-            <li><a href="data/nr_species_annotation.xlsx" download>Download NR Species Annotation Data</a></li>
+            <li><a href="data/nr_species_annotation.csv" download>Download NR Species Annotation Data</a></li>
+            <li><a href="data/HZ_only.txt" download>Download HZ Only Data</a></li>
+            <li><a href="data/XY_only.txt" download>Download XY Only Data</a></li>
+            <li><a href="data/HZ_and_XY.txt" download>Download HZ and XY Data</a></li>
         </ul>
+        <div class="info">
+            <p>If you need more information, please contact Dr. Shen.</p>
+        </div>
+        <img src="images/NR_species_VENN.png" alt="NR Venn Diagram" style="width: 100%; margin-top: 20px;">
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            fetch('data/nr_species_annotation.xlsx')
+            fetch('data/nr_species_annotation.csv')
                 .then(response => response.text())
                 .then(data => {
-                    const rows = data.split('\n').slice(1, 101);
+                    const rows = data.split('\n').slice(1, 101); // Skip header and limit to 100 rows
                     const tableBody = document.querySelector('tbody');
                     rows.forEach(row => {
-                        const cells = row.split('\t');
+                        const cells = row.split(','); // Split by comma
                         const tableRow = document.createElement('tr');
                         cells.forEach(cell => {
                             const tableCell = document.createElement('td');
@@ -112,4 +122,3 @@
     </script>
 </body>
 </html>
-
