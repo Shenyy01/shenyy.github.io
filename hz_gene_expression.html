@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HZ Genotype Data</title>
+    <title>HZ Gene Expression Data</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -42,14 +42,21 @@
         .download-link {
             margin-top: 20px;
         }
+        .download-link a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .download-link a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>HZ Genotype Data</h1>
+        <h1>HZ Gene Expression Data</h1>
     </header>
     <div class="content">
-        <p>This is the genotype data for HZ Buffalo.</p>
+        <p>This is the gene expression data for HZ Buffalo.</p>
         <table id="data-table">
             <!-- Table data will be inserted here by JavaScript -->
         </table>
@@ -60,7 +67,7 @@
     <script>
         // JavaScript to load CSV data and insert into the table
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('data/hz_genotype.csv')
+            fetch('data/hz_gene_expression.csv')
                 .then(response => response.text())
                 .then(text => {
                     const rows = text.split('\n');
