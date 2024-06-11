@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XY Genotype Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/background.jpg') no-repeat center center fixed;
+            background-size: 100% 100%;
+            filter: brightness(80%);
+            color: white;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            margin: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        p {
+            font-size: 20px;
+        }
+        .download-links {
+            list-style-type: none;
+            padding: 0;
+        }
+        .download-links li {
+            margin: 10px 0;
+        }
+        .download-links a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .download-links a:hover {
+            text-decoration: underline;
+        }
+        .heatmap {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>XY Genotype Data</h1>
+    </header>
+    <div class="content">
+        <p>This is the genotype data for XY Buffalo. You can download the data or contact Dr.Shen for more information.</p>
+        <div class="heatmap">
+            <img src="images/snp_density_heatmap.png" alt="SNP Density Heatmap" width="80%">
+        </div>
+        <ul class="download-links">
+            <li><a href="data/xy_genotype.csv" download>Download XY Genotype Data</a></li>
+        </ul>
+        <p>If you need more information, please contact Dr. Shen.</p>
+    </div>
+</body>
+</html>
 
