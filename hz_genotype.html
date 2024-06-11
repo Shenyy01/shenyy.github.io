@@ -28,19 +28,25 @@
         p {
             font-size: 20px;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        .download-links {
+            list-style-type: none;
+            padding: 0;
         }
-        th, td {
-            padding: 10px;
-            border: 1px solid white;
+        .download-links li {
+            margin: 10px 0;
         }
-        th {
-            background-color: rgba(0, 0, 0, 0.7);
+        .download-links a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-size: 18px;
         }
-        .download-link {
-            margin-top: 20px;
+        .download-links a:hover {
+            text-decoration: underline;
+        }
+        .heatmap {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
         }
     </style>
 </head>
@@ -49,34 +55,14 @@
         <h1>HZ Genotype Data</h1>
     </header>
     <div class="content">
-        <p>This is the genotype data for HZ Buffalo.</p>
-        <table id="data-table">
-            <!-- Table data will be inserted here by JavaScript -->
-        </table>
-        <div class="download-link">
-            <a href="data/hz_genotype.csv" download>Download Data</a>
+        <p>This is the genotype data for HZ Buffalo. You can download the data or contact Dr.Shen for more information.</p>
+        <div class="heatmap">
+            <img src="images/snp_density_heatmap.png" alt="SNP Density Heatmap" width="80%">
         </div>
+        <ul class="download-links">
+            <li><a href="data/hz_genotype.csv" download>Download HZ Genotype Data</a></li>
+        </ul>
+        <p>If you need more information, please contact Dr. Shen.</p>
     </div>
-    <script>
-        // JavaScript to load CSV data and insert into the table
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('data/hz_genotype.csv')
-                .then(response => response.text())
-                .then(text => {
-                    const rows = text.split('\n');
-                    const table = document.getElementById('data-table');
-                    rows.forEach((row, rowIndex) => {
-                        const cells = row.split(',');
-                        const rowElement = document.createElement('tr');
-                        cells.forEach(cell => {
-                            const cellElement = rowIndex === 0 ? document.createElement('th') : document.createElement('td');
-                            cellElement.textContent = cell;
-                            rowElement.appendChild(cellElement);
-                        });
-                        table.appendChild(rowElement);
-                    });
-                });
-        });
-    </script>
 </body>
 </html>
