@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XY and HZ buffaloes' Microbiome Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/background.jpg') no-repeat center center fixed;
+            background-size: 100% 100%;
+            filter: brightness(80%);
+            color: white;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            margin: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid white;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .download-links {
+            list-style-type: none;
+            padding: 0;
+        }
+        .download-links li {
+            margin: 10px 0;
+        }
+        .download-links a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .download-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>XY and HZ buffaloes' Microbiome Data</h1>
+    </header>
+    <div class="content">
+        <p>This page shows the NR species annotation table for XY and HZ buffaloes' microbiome data. You can download the full dataset using the link below.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Domain</th>
+                    <th>Kingdom</th>
+                    <th>Phylum</th>
+                    <th>Class</th>
+                    <th>Order</th>
+                    <th>Family</th>
+                    <th>Genus</th>
+                    <th>Species</th>
+                    <th>Total Reads</th>
+                    <th>Percent</th>
+                    <th>Prevalence</th>
+                    <th>Gene Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+        <ul class="download-links">
+            <li><a href="data/nr_species_annotation.csv" download>Download NR Species Annotation Data</a></li>
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('data/nr_species_annotation.csv')
+                .then(response => response.text())
+                .then(data => {
+                    const rows = data.split('\n').slice(1, 101);
+                    const tableBody = document.querySelector('tbody');
+                    rows.forEach(row => {
+                        const cells = row.split('\t');
+                        const tableRow = document.createElement('tr');
+                        cells.forEach(cell => {
+                            const tableCell = document.createElement('td');
+                            tableCell.textContent = cell;
+                            tableRow.appendChild(tableCell);
+                        });
+                        tableBody.appendChild(tableRow);
+                    });
+                });
+        });
+    </script>
+</body>
+</html>
 
