@@ -16,14 +16,20 @@
         }
         header {
             background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
+            padding: 30px; /* Increased padding for better spacing */
             text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em; /* Increased font size for the title */
         }
         .content {
             margin: 20px;
             background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
+            padding: 30px; /* Increased padding for better spacing */
             border-radius: 10px;
+        }
+        p {
+            font-size: 1.8em; /* Increased font size */
         }
         table {
             width: 100%;
@@ -34,8 +40,9 @@
             border: 1px solid white;
         }
         th, td {
-            padding: 8px;
+            padding: 10px; /* Increased padding for better readability */
             text-align: left;
+            font-size: 1.2em; /* Increased font size for table content */
         }
         th {
             background-color: #4CAF50;
@@ -46,18 +53,50 @@
             padding: 0;
         }
         .download-links li {
-            margin: 10px 0;
+            margin: 15px 0; /* Increased margin for better spacing */
         }
         .download-links a {
             color: #4CAF50;
             text-decoration: none;
-            font-size: 24px;
+            font-size: 1.8em; /* Increased font size */
         }
         .download-links a:hover {
             text-decoration: underline;
         }
         .info {
             margin-top: 20px;
+            font-size: 1.8em; /* Increased font size */
+        }
+        .images-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .image-item {
+            margin: 20px 0;
+            max-width: 60%; /* Adjusted max-width for better layout */
+            text-align: center;
+        }
+        .image-item img {
+            max-width: 50%; /* Reduced image size */
+            height: auto;
+            border-radius: 10px;
+        }
+        .caption {
+            font-size: 1.5em; /* Increased font size for captions */
+            margin-top: 10px;
+        }
+        @media (max-width: 768px) {
+            p, .download-links a, th, td {
+                font-size: 1.5em; /* Adjusted font size for smaller screens */
+            }
+            .content {
+                padding: 20px; /* Adjusted padding for smaller screens */
+            }
+            .caption {
+                font-size: 1.2em;
+            }
         }
     </style>
 </head>
@@ -97,7 +136,16 @@
         <div class="info">
             <p>If you need more information, please contact us.</p>
         </div>
-        <img src="images/NR_species_VENN.png" alt="NR Venn Diagram" style="width: 50%; margin-top: 20px;">
+        <div class="images-container">
+            <div class="image-item">
+                <img src="images/NR_species_VENN.png" alt="NR Venn Diagram">
+                <div class="caption">Species level of two buffalo rumen microbial Venn diagram</div>
+            </div>
+            <div class="image-item">
+                <img src="images/metagenome.png" alt="Metagenome Analysis">
+                <div class="caption">Analysis of α diversity and species composition of rumen microflora of buffalo in two groups. (A) PCoA analysis of rumen microflora. The abscissa represents the first principal component, the ordinate represents the second principal component, and the percentage represents the contribution value of the principal component to the sample difference. (B-F) Box diagram of the difference between groups of the α diversity index. (G) Statistical histogram of microbial numbers at each classification level. Venn diagram of abundance distribution at (H) Kingdom, (I) phylum, (J) class, (K) order, (L) family, (M) genus, (N) species.</div>
+            </div>
+        </div>
     </div>
 
     <script>
