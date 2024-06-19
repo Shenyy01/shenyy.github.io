@@ -3,50 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XY Genotype Data</title>
+    <title>XY Genotype Data - Buffalo Genomics</title>
+    <meta name="description" content="Download XY Buffalo genotype data and view the SNP density heatmap. Contact us for more information.">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background: url('images/background.jpg') no-repeat center center fixed;
-            background-size: 100% 100%;
+            background-size: cover;
             filter: brightness(100%);
             color: white;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
             text-align: center;
         }
+        header h1 {
+        font-size: 4em; /* Increased font size for the title */
+    }
         .content {
             margin: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
             border-radius: 10px;
         }
         p {
-            font-size: 24px;
+            font-size: 3em;
         }
         .download-links {
             list-style-type: none;
             padding: 0;
         }
         .download-links li {
-            margin: 10px 0;
+            margin: 15px 0;
         }
         .download-links a {
             color: #4CAF50;
             text-decoration: none;
-            font-size: 24px;
+            font-size: 3em;
         }
         .download-links a:hover {
             text-decoration: underline;
         }
-        .heatmap {
+        .images-container {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             margin: 20px 0;
+        }
+        .image-item {
+            margin: 20px 0;
+            max-width: 60%;
+            text-align: center;
+        }
+        .image-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .caption {
+            font-size: 2em;
+            margin-top: 10px;
+        }
+        @media (max-width: 768px) {
+            p, .download-links a {
+                font-size: 2em;
+            }
+            .content {
+                padding: 20px;
+            }
+            .caption {
+                font-size: 2em;
+            }
         }
     </style>
 </head>
@@ -56,8 +86,15 @@
     </header>
     <div class="content">
         <p>This is the genotype data for XY Buffalo. You can download the data or contact us for more information.</p>
-        <div class="heatmap">
-            <img src="images/snp_density_heatmap.png" alt="SNP Density Heatmap" width="80%">
+        <div class="images-container">
+            <div class="image-item">
+                <img src="images/snp_density_heatmap.png" alt="SNP Density Heatmap">
+                <div class="caption">Distribution map of whole-genome SNP marker density. The heatmap depicts the density distribution of the SNP dataset across buffalo chromosomes 1 to 24, calculated using a 1 Mb sliding window. The color gradient from green to red indicates increasing SNP density in the respective regions.</div>
+            </div>
+            <div class="image-item">
+                <img src="images/ancestry_composition.png" alt="Ancestry Composition">
+                <div class="caption">Clustering results of the principal component analysis (PCA). PC1 and PC2 represent the first and second principal components, respectively; each point represents an individual buffalo sample. Evolutionary tree of the five buffalo populations based on genetic distance. Ancestry composition results with the assumed number of ancestries at K = 2. K is an adjustable parameter representing the number of possible ancestral varieties. Through the calculation of the cross-validation error, we obtained K = 2 as the best K value.</div>
+            </div>
         </div>
         <ul class="download-links">
             <li><a href="data/xy_genotype.csv" download>Download XY Genotype Data</a></li>
@@ -66,4 +103,3 @@
     </div>
 </body>
 </html>
-
