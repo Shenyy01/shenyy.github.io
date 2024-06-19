@@ -112,7 +112,7 @@ footer {
     text-align: center;
     padding: 20px;
     position: fixed;
-    width: 100%;
+    width: 50%;
     bottom: 0;
     font-size: 24px; /* Increase footer text size */
 }
