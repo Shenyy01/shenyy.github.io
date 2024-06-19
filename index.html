@@ -15,30 +15,32 @@
 
         /* Header 样式 */
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #f8f9fa;
+            background-color: rgba(0, 0, 0, 0.8); /* 透明黑色背景 */
+            color: #ffffff; /* 纯白色字体 */
             padding: 10px 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: fixed;
+            position: absolute; /* 绝对定位 */
             top: 0;
             width: 100%;
             z-index: 1000;
+            text-align: center;
         }
 
         .logo img {
             height: 50px; /* 调整logo的大小 */
+            filter: invert(1); /* 图片反色，确保白色字体在黑色背景上显现 */
         }
 
         .team-info p {
             margin: 0;
+            font-size: 24px; /* 团队信息字体大小 */
         }
 
         nav ul {
             list-style: none;
             display: flex;
             gap: 20px;
+            font-size: 24px; /* 导航链接字体大小 */
         }
 
         nav ul li {
@@ -47,7 +49,7 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #007bff;
+            color: #ffffff;
         }
 
         .hero {
@@ -59,7 +61,7 @@
 
         .hero h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 3rem; /* 标题字体大小 */
         }
 
         .hero p {
@@ -111,23 +113,24 @@
         }
 
         footer {
-            background-color: #f8f9fa;
+            background-color: rgba(0, 0, 0, 0.8); /* 透明黑色背景 */
+            color: #ffffff; /* 纯白色字体 */
             text-align: center;
             padding: 10px 20px;
             box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-            position: fixed;
+            position: absolute; /* 绝对定位 */
             bottom: 0;
             width: 100%;
             z-index: 1000;
+            font-size: 24px; /* Footer字体大小 */
         }
 
         footer p {
             margin: 0;
-            font-size: 1rem;
         }
 
         footer a {
-            color: #007bff;
+            color: #ffffff;
             text-decoration: none;
         }
 
