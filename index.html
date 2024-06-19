@@ -6,17 +6,131 @@
     <title>Buffalo Multi-Omics Sequencing Data</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* 样式重置 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header 样式 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f9fa;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 50px; /* 调整logo的大小 */
+        }
+
+        .team-info p {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .hero {
+            padding-top: 70px; /* 留出header空间 */
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #e9ecef;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .hero p {
+            margin: 20px 0;
+            font-size: 1.1rem;
+        }
+
+        .content {
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .intro-text {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .link-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .link-list li {
+            margin-bottom: 10px;
+        }
+
+        .link-list a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
         .technical-roadmap-container {
             background-color: #ffffff;
             padding: 20px;
             margin-top: 30px;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         .technical-roadmap {
             max-width: 100%;
             height: auto;
         }
+
+        footer {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 10px 20px;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
     </style>
 </head>
 <body>
@@ -29,7 +143,10 @@
         </div>
         <nav>
             <ul>
-                
+                <!-- 添加导航链接 -->
+                <li><a href="#hz">HZ</a></li>
+                <li><a href="#xy">XY</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -63,7 +180,7 @@
 
         <!-- Technical Roadmap Section -->
         <div class="technical-roadmap-container">
-            <img class="technical-roadmap" src="images/technical_roadmap_image.jpg" alt="Technical Roadmap">
+            <img class="technical-roadmap" src="path/to/your/technical_roadmap_image.jpg" alt="Technical Roadmap">
         </div>
 
     </div>
