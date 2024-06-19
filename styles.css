@@ -27,10 +27,13 @@ header nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
 }
 
 header nav ul li {
     margin: 0 15px;
+    color: #fff;
+    font-size: 30px; /* Increase font size */
 }
 
 header nav ul li a {
@@ -73,7 +76,7 @@ header nav ul li a:hover {
     padding: 40px 20px;
     background-color: rgba(255, 255, 255, 0.8);
     margin: 20px auto;
-    max-width: 1000px;
+    max-width: 1500px; /* Increase width by 50% */
     border-radius: 10px;
 }
 
