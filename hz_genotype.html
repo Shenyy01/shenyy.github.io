@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HZ Genotype Data</title>
+    <title>HZ Genotype Data - Buffalo Genomics</title>
+    <meta name="description" content="Download HZ Buffalo genotype data and view the SNP density heatmap. Contact us for more information.">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background: url('images/background.jpg') no-repeat center center fixed;
-            background-size: 100% 100%;
+            background-size: cover;
             filter: brightness(100%);
             color: white;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
             text-align: center;
         }
         .content {
             margin: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
             border-radius: 10px;
         }
         p {
-            font-size: 24px;
+            font-size: 1.5em;
         }
         .download-links {
             list-style-type: none;
@@ -38,7 +39,7 @@
         .download-links a {
             color: #4CAF50;
             text-decoration: none;
-            font-size: 24px;
+            font-size: 1.5em;
         }
         .download-links a:hover {
             text-decoration: underline;
@@ -47,6 +48,18 @@
             display: flex;
             justify-content: center;
             margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        @media (max-width: 768px) {
+            p, .download-links a {
+                font-size: 1.2em;
+            }
+            .content {
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -57,13 +70,12 @@
     <div class="content">
         <p>This is the genotype data for HZ Buffalo. You can download the data or contact us for more information.</p>
         <div class="heatmap">
-            <img src="images/snp_density_heatmap.png" alt="SNP Density Heatmap" width="80%">
+            <img src="images/snp_density_heatmap.png" alt="SNP Density Heatmap">
         </div>
         <ul class="download-links">
-            <li><a href="data/hz_genotype.csv" download>Download hz Genotype Data</a></li>
+            <li><a href="data/hz_genotype.csv" download>Download HZ Genotype Data</a></li>
         </ul>
         <p>If you need more information, please contact us.</p>
     </div>
 </body>
 </html>
-
