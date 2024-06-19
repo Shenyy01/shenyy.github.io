@@ -19,7 +19,7 @@ header {
 }
 
 header .logo img {
-    height:100px;
+    height: 50px;
 }
 
 header nav ul {
@@ -30,13 +30,13 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 25px;
+    margin: 0 15px;
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 30px; /* Increase font size */
+    font-size: 24px; /* Increase font size */
 }
 
 header nav ul li a:hover {
@@ -54,14 +54,19 @@ header nav ul li a:hover {
     margin-top: 70px; /* To account for fixed header */
 }
 
+.hero-content {
+    width: 50%; /* Reduce the width by half */
+    margin: 0 auto;
+}
+
 .hero-content h1 {
     font-size: 48px;
     margin: 0;
 }
 
 .hero-content p {
-    font-size: 30px;
-    margin: 15px 0 0;
+    font-size: 24px;
+    margin: 10px 0 0;
 }
 
 .content {
@@ -112,7 +117,7 @@ footer {
     text-align: center;
     padding: 20px;
     position: fixed;
-    width: 50%;
+    width: 100%;
     bottom: 0;
     font-size: 24px; /* Increase footer text size */
 }
