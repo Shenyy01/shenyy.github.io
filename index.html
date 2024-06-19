@@ -15,15 +15,17 @@
 
         /* Header 样式 */
         header {
-            background-color: rgba(255, 255, 255, 0.9); /* 白色背景，稍作透明度处理 */
-            color: #000000; /* 黑色字体 */
+            background-color: rgba(0, 0, 0, 0.8); /* 黑色背景，稍作透明度处理 */
+            color: #ffffff; /* 白色字体 */
             padding: 10px 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: absolute; /* 绝对定位 */
             top: 0;
             width: 100%;
             z-index: 1000;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .logo img {
@@ -33,7 +35,6 @@
         .team-info p {
             margin: 0;
             font-size: 24px; /* 团队信息字体大小 */
-            color: #000000; /* 黑色字体 */
         }
 
         nav ul {
@@ -49,11 +50,11 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #000000; /* 黑色字体 */
+            color: #ffffff; /* 白色字体 */
         }
 
         .hero {
-            padding-top: 70px; /* 留出header空间 */
+            padding-top: 120px; /* 留出header空间 */
             text-align: center;
             padding: 50px 20px;
             background-color: #e9ecef;
@@ -113,8 +114,8 @@
         }
 
         footer {
-            background-color: rgba(255, 255, 255, 0.9); /* 白色背景，稍作透明度处理 */
-            color: #000000; /* 黑色字体 */
+            background-color: rgba(0, 0, 0, 0.8); /* 黑色背景，稍作透明度处理 */
+            color: #ffffff; /* 白色字体 */
             text-align: center;
             padding: 10px 20px;
             box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
@@ -183,11 +184,11 @@
 
         <!-- Technical Roadmap Section -->
         <div class="technical-roadmap-container">
-            <img class="technical-roadmap" src="images/technical_roadmap_image.jpg" alt="Technical Roadmap">
+            <img class="technical-roadmap" src="path/to/your/technical_roadmap_image.jpg" alt="Technical Roadmap">
         </div>
 
     </div>
-    <footer>
+    <footer id="contact">
         <p>Contact us at <a href="mailto:20230020@jaas.ac.cn">20230020@jaas.ac.cn</a></p>
     </footer>
 </body>
