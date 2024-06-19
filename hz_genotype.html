@@ -17,43 +17,42 @@
         }
         header {
             background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px;
+            padding: 30px;
             text-align: center;
         }
         .content {
             margin: 20px;
             background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px;
+            padding: 30px;
             border-radius: 10px;
         }
         p {
-            font-size: 1.5em;
+            font-size: 1.8em;
         }
         .download-links {
             list-style-type: none;
             padding: 0;
         }
         .download-links li {
-            margin: 10px 0;
+            margin: 15px 0;
         }
         .download-links a {
             color: #4CAF50;
             text-decoration: none;
-            font-size: 1.5em;
+            font-size: 1.8em;
         }
         .download-links a:hover {
             text-decoration: underline;
         }
         .images-container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             margin: 20px 0;
         }
         .image-item {
-            flex: 1;
-            margin: 10px;
-            max-width: 48%;
+            margin: 20px 0;
+            max-width: 80%;
             text-align: center;
         }
         .image-item img {
@@ -62,22 +61,18 @@
             border-radius: 10px;
         }
         .caption {
-            font-size: 1em;
+            font-size: 1.2em;
             margin-top: 10px;
         }
         @media (max-width: 768px) {
             p, .download-links a {
-                font-size: 1.2em;
+                font-size: 1.5em;
             }
             .content {
-                padding: 15px;
-            }
-            .image-item {
-                max-width: 100%;
-                margin: 10px 0;
+                padding: 20px;
             }
             .caption {
-                font-size: 0.9em;
+                font-size: 1em;
             }
         }
     </style>
@@ -95,7 +90,7 @@
             </div>
             <div class="image-item">
                 <img src="images/ancestry_composition.png" alt="Ancestry Composition">
-                <div class="caption">(A) Clustering results of the principal component analysis (PCA). PC1 and PC2 represent the first and second principal components, respectively; each point represents an individual buffalo sample.(B) Evolutionary tree of the five buffalo populations based on genetic distance.(C) Ancestry composition results with the assumed number of ancestries at K = 2. K is an adjustable parameter representing the number of possible ancestral varieties. Through the calculation of the cross-validation error, we obtained K = 2 as the best K value.</div>
+                <div class="caption">Clustering results of the principal component analysis (PCA). PC1 and PC2 represent the first and second principal components, respectively; each point represents an individual buffalo sample. Evolutionary tree of the five buffalo populations based on genetic distance. Ancestry composition results with the assumed number of ancestries at K = 2. K is an adjustable parameter representing the number of possible ancestral varieties. Through the calculation of the cross-validation error, we obtained K = 2 as the best K value.</div>
             </div>
         </div>
         <ul class="download-links">
