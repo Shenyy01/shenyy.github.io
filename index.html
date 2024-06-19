@@ -4,61 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buffalo Multi-Omics Sequencing Data</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            font-size: 30px; /* 增加文本字体大小 */
-            margin: 0;
-            padding: 0;
-            background: url('images/background.jpg') no-repeat center center;
-            background-size: 100% 100%; /* 背景图片填充整个页面 */
-            filter: brightness(80%); /* 调整背景图片亮度 */
-            color: white;
-        }
-        header {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            text-align: center;
-        }
-        .content {
-            margin: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        .section h2 {
-            font-size: 36px; /* 增加标题字体大小 */
-            color: #ffffff;
-        }
-        .link-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .link-list li {
-            margin: 5px 0;
-        }
-        .link-list a {
-            font-size: 28px; /* 增加链接字体大小 */
-            color: #ffffff;
-            text-decoration: none;
-        }
-        .link-list a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Buffalo Multi-Omics Sequencing Data</h1>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hz">HZ</a></li>
+                <li><a href="#xy">XY</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Buffalo Multi-Omics Sequencing Data</h1>
+            <p>Hello! This is a website for sharing data from Haizi (HZ) and Xuyi (XY) mountain Buffalo multiomics analysis.</p>
+        </div>
+    </section>
     <div class="content">
-        <p>Hello!</p>
-        <p>This is a website for sharing data from Haizi (HZ) and Xuyi (XY) mountain Buffalo multiomics analysis.</p>
-        <p>We are delighted to have you here! Explore the comprehensive analysis results of genotype, gene expression, and molecular phenotype of HZ and XY buffalo. We are eager to connect with fellow scientists interested in our project. If you have any question, please feel free to contact us (20230020@jaas.ac.cn). Thank you!</p>
-        <div class="section">
+        <p>We are delighted to have you here! Explore the comprehensive analysis results of genotype, gene expression, and molecular phenotype of HZ and XY buffalo. We are eager to connect with fellow scientists interested in our project. If you have any questions, please feel free to contact us at <a href="mailto:20230020@jaas.ac.cn">20230020@jaas.ac.cn</a>. Thank you!</p>
+        <div class="section" id="hz">
             <h2>HZ</h2>
             <ul class="link-list">
                 <li><a href="hz_genotype.html">Genotype Data</a></li>
@@ -67,7 +36,7 @@
                 <li><a href="xy_microbiome.html">Microbiome Data</a></li>
             </ul>
         </div>
-        <div class="section">
+        <div class="section" id="xy">
             <h2>XY</h2>
             <ul class="link-list">
                 <li><a href="xy_genotype.html">Genotype Data</a></li>
@@ -77,5 +46,8 @@
             </ul>
         </div>
     </div>
+    <footer id="contact">
+        <p>Contact us at <a href="mailto:20230020@jaas.ac.cn">20230020@jaas.ac.cn</a></p>
+    </footer>
 </body>
 </html>
