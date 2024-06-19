@@ -16,32 +16,66 @@
         }
         header {
             background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
+            padding: 30px; /* Increased padding for better spacing */
             text-align: center;
+        }
+        header h1 {
+            font-size: 4em; /* Increased font size for the title */
         }
         .content {
             margin: 20px;
             background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
+            padding: 30px; /* Increased padding for better spacing */
             border-radius: 10px;
         }
         p {
-            font-size: 24px;
+            font-size: 2em; /* Increased font size */
         }
         .download-links {
             list-style-type: none;
             padding: 0;
         }
         .download-links li {
-            margin: 10px 0;
+            margin: 15px 0; /* Increased margin for better spacing */
         }
         .download-links a {
             color: #4CAF50;
             text-decoration: none;
-            font-size: 24px;
+            font-size: 2em; /* Increased font size */
         }
         .download-links a:hover {
             text-decoration: underline;
+        }
+        .images-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .image-item {
+            margin: 20px 0;
+            max-width: 80%; /* Reduced max-width for smaller images */
+            text-align: center;
+        }
+        .image-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .caption {
+            font-size: 2em;
+            margin-top: 10px;
+        }
+        @media (max-width: 768px) {
+            p, .download-links a {
+                font-size: 2em; /* Adjusted font size for smaller screens */
+            }
+            .content {
+                padding: 20px; /* Adjusted padding for smaller screens */
+            }
+            .caption {
+                font-size: 2em;
+            }
         }
     </style>
 </head>
@@ -57,7 +91,16 @@
             <li><a href="data/xy_rumen_neg.csv" download>Download XY Rumen Negative Data</a></li>
             <li><a href="data/xy_rumen_pos.csv" download>Download XY Rumen Positive Data</a></li>
         </ul>
+        <div class="images-container">
+            <div class="image-item">
+                <img src="images/m1.png" alt="Correlation heat map of HZ and XY rumen metabolites">
+                <div class="caption">Correlation heat map of HZ (A) and XY (B) rumen metabolites in positive and negative ion mode</div>
+            </div>
+            <div class="image-item">
+                <img src="images/m2.png" alt="Analysis of differential metabolites">
+                <div class="caption">Analysis of differential metabolites between HZ and XYM in negative ion mode. (A) Multiples of metabolite differences between groups. The horizontal coordinate indicates that the difference multiples are all pairs with base 2. The ordinate indicates the differential metabolite code. (B) Volcanic map of differential metabolites. Each point represents a metabolite, the horizontal coordinate represents the change in the multiple of the group of contrasting substances (Log2), and the vertical coordinate represents the VIP value. Green represents down-regulation, red represents up-regulation, and gray represents metabolites that are detected but do not change significantly. (C) KEGG enrichment map of differential metabolites. The abscissa indicates enrichment, the ordinate indicates the path name, and the color of the point indicates P-value. The size of the points indicates the number of differentiated metabolites enriched.</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
-
